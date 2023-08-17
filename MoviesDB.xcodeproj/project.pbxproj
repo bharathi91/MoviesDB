@@ -34,7 +34,11 @@
 		6A4E7E642A8C64DD003CF7C8 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A4E7E622A8C64DD003CF7C8 /* MovieTableViewCell.xib */; };
 		6A4E7E662A8C64FE003CF7C8 /* UITableviewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4E7E652A8C64FE003CF7C8 /* UITableviewExtensions.swift */; };
 		6A4E7E682A8C829F003CF7C8 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4E7E672A8C829E003CF7C8 /* ImageDownloader.swift */; };
-		6AB324B12A8E153400671D42 /* Movies.json in Resources */ = {isa = PBXBuildFile; fileRef = 6AB324B02A8E153400671D42 /* Movies.json */; };
+		6AB324B32A8E229900671D42 /* Movies.json in Resources */ = {isa = PBXBuildFile; fileRef = 6AB324B22A8E229900671D42 /* Movies.json */; };
+		6AB324B52A8E22D700671D42 /* MovieViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB324B42A8E22D700671D42 /* MovieViewModal.swift */; };
+		6AB324B72A8E234C00671D42 /* MoviesListUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB324B62A8E234C00671D42 /* MoviesListUseCaseImpl.swift */; };
+		6AB324B92A8E238800671D42 /* MoviesListServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB324B82A8E238800671D42 /* MoviesListServiceImpl.swift */; };
+		6AB324BB2A8E243E00671D42 /* MoviesListRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB324BA2A8E243E00671D42 /* MoviesListRepositoryImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +90,11 @@
 		6A4E7E622A8C64DD003CF7C8 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		6A4E7E652A8C64FE003CF7C8 /* UITableviewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableviewExtensions.swift; sourceTree = "<group>"; };
 		6A4E7E672A8C829E003CF7C8 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
-		6AB324B02A8E153400671D42 /* Movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Movies.json; path = ../../../Downloads/Movies.json; sourceTree = "<group>"; };
+		6AB324B22A8E229900671D42 /* Movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Movies.json; sourceTree = "<group>"; };
+		6AB324B42A8E22D700671D42 /* MovieViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModal.swift; sourceTree = "<group>"; };
+		6AB324B62A8E234C00671D42 /* MoviesListUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListUseCaseImpl.swift; sourceTree = "<group>"; };
+		6AB324B82A8E238800671D42 /* MoviesListServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListServiceImpl.swift; sourceTree = "<group>"; };
+		6AB324BA2A8E243E00671D42 /* MoviesListRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListRepositoryImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,8 +147,8 @@
 			children = (
 				6A4E7E0F2A8BC004003CF7C8 /* AppDelegate.swift */,
 				6A4E7E112A8BC004003CF7C8 /* SceneDelegate.swift */,
+				6AB324B22A8E229900671D42 /* Movies.json */,
 				6A4E7E3F2A8BC02E003CF7C8 /* MoviesDBRouter.swift */,
-				6AB324B02A8E153400671D42 /* Movies.json */,
 				6A4E7E692A8C8C7D003CF7C8 /* Views */,
 				6A4E7E6B2A8C8CD7003CF7C8 /* Modal */,
 				6A4E7E6A2A8C8CA8003CF7C8 /* Network */,
@@ -201,6 +209,7 @@
 			children = (
 				6A4E7E5B2A8C60B2003CF7C8 /* Movie.swift */,
 				6A4E7E5C2A8C60B2003CF7C8 /* Movies.swift */,
+				6AB324B42A8E22D700671D42 /* MovieViewModal.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -220,6 +229,9 @@
 			children = (
 				6A4E7E552A8BC741003CF7C8 /* MoviesDetailViewModalImpl.swift */,
 				6A4E7E512A8BC333003CF7C8 /* MoviesListViewModalImpl.swift */,
+				6AB324B62A8E234C00671D42 /* MoviesListUseCaseImpl.swift */,
+				6AB324B82A8E238800671D42 /* MoviesListServiceImpl.swift */,
+				6AB324BA2A8E243E00671D42 /* MoviesListRepositoryImpl.swift */,
 			);
 			path = ViewModals;
 			sourceTree = "<group>";
@@ -330,7 +342,7 @@
 			files = (
 				6A4E7E1C2A8BC007003CF7C8 /* LaunchScreen.storyboard in Resources */,
 				6A4E7E192A8BC007003CF7C8 /* Assets.xcassets in Resources */,
-				6AB324B12A8E153400671D42 /* Movies.json in Resources */,
+				6AB324B32A8E229900671D42 /* Movies.json in Resources */,
 				6A4E7E642A8C64DD003CF7C8 /* MovieTableViewCell.xib in Resources */,
 				6A4E7E172A8BC004003CF7C8 /* Main.storyboard in Resources */,
 			);
@@ -359,6 +371,7 @@
 			files = (
 				6A4E7E502A8BC2CC003CF7C8 /* MoviesListViewController.swift in Sources */,
 				6A4E7E482A8BC0FD003CF7C8 /* NetworkError.swift in Sources */,
+				6AB324BB2A8E243E00671D42 /* MoviesListRepositoryImpl.swift in Sources */,
 				6A4E7E662A8C64FE003CF7C8 /* UITableviewExtensions.swift in Sources */,
 				6A4E7E5F2A8C60B2003CF7C8 /* Movie.swift in Sources */,
 				6A4E7E462A8BC0C5003CF7C8 /* Networkrequest.swift in Sources */,
@@ -368,9 +381,12 @@
 				6A4E7E562A8BC741003CF7C8 /* MoviesDetailViewModalImpl.swift in Sources */,
 				6A4E7E402A8BC02E003CF7C8 /* MoviesDBRouter.swift in Sources */,
 				6A4E7E5D2A8C60B2003CF7C8 /* ImageSize.swift in Sources */,
+				6AB324B52A8E22D700671D42 /* MovieViewModal.swift in Sources */,
+				6AB324B72A8E234C00671D42 /* MoviesListUseCaseImpl.swift in Sources */,
 				6A4E7E632A8C64DD003CF7C8 /* MovieTableViewCell.swift in Sources */,
 				6A4E7E422A8BC065003CF7C8 /* NetworkManager.swift in Sources */,
 				6A4E7E542A8BC5A7003CF7C8 /* MovieDetail.swift in Sources */,
+				6AB324B92A8E238800671D42 /* MoviesListServiceImpl.swift in Sources */,
 				6A4E7E102A8BC004003CF7C8 /* AppDelegate.swift in Sources */,
 				6A4E7E582A8BC97E003CF7C8 /* MoviesDetailViewController.swift in Sources */,
 				6A4E7E522A8BC333003CF7C8 /* MoviesListViewModalImpl.swift in Sources */,

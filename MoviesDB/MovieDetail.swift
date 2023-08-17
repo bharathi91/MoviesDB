@@ -35,22 +35,5 @@ public class MovieDetail {
         let viewModel = MoviesDetailViewModalImpl(movieData: movieData)
         return viewModel
     }
-/*
- private func createMovieDetailUseCase() -> IMovieDetailUseCase {
-     let useCase = MovieDetailUseCaseImpl(repository: createMovieDetailRepository())
-     return useCase
- }
-
- private func createMovieDetailRepository() -> IMovieDetailRepository {
-     let repository = MovieDetailRepositoryImpl(service: createMovieDetailService())
-     return repository
- }
-
- private func createMovieDetailService() -> IMovieDetailService {
-     let service = MovieDetailServiceImpl(networkManager: self.networkManager)
-     return service
- }
- */
-   
 
 }

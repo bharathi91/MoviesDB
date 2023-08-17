@@ -27,7 +27,6 @@ class MovieTableViewCell: UITableViewCell, NibProvidable, ReusableView {
         subtitle.text = viewModel.releaseDate
         rating.text = "\(viewModel.voteAverage)"
         poster.loadRemoteImageFrom(urlString: "\(Configuration.smallImageUrl)\(viewModel.poster ?? "")")
-       // cancellable = viewModel.poster.sink { [unowned self] image in self.showImage(image: image) }
     }
 
      func showImage(image: UIImage?) {

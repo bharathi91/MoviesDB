@@ -14,3 +14,7 @@ struct Configuration {
     static let api_key = "&api_key=c8cf4b259fb6aed1e8562a005b7f6d8c&language=en"
 }
 
+enum APIEndPointConstants {
+    static let listEndpoint = ""
+}
+
