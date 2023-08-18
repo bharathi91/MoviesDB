@@ -45,24 +45,5 @@ public class MoviesList {
 }
 
 
-protocol IMoviesListRepository {
-    func getMovieList(searchString: String,completion: @escaping (Result<MoviesListModel, Error>) -> Void)
-    func getMovieDetails(searchString: String,index: String, completion: @escaping (Result<MoviesDetailModel, Error>) -> Void)
-}
-struct MoviesDetailModel: Decodable {
-    let id: Int?
-}
-struct MoviesListModel: Decodable {
-    let count: Double?
-    let next: String?
-    let previous: String?
-    let results: [Movie]?
-}
-protocol IMoviesListService {
-    func getMovieList(searchString: String,completion: @escaping (Result<MoviesListModel, Error>) -> Void)
-    func getMovieDetail(searchString: String,index: String, completion: @escaping (Result<MoviesDetailModel, Error>) -> Void)
-}
-
-
 
 

@@ -20,12 +20,4 @@ class MoviesDBRouter: NSObject {
         }
         return nil
     }
-    
-    static func routeToMovieDetails(movieData: Movie, MovieListData: [Movie]) -> UIViewController? {
-        let module = MovieDetail(networkManager: networkManager, movieData: movieData, movieListData: MovieListData)
-        if let controller = module.createMovieDetailViewController() {
-            return controller
-        }
-        return nil
-    }
 }

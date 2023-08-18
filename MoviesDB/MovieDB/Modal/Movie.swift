@@ -17,18 +17,10 @@ struct Movie {
     let voteAverage: Float
     let releaseDate: String?
 }
-
-extension Movie: Hashable {
-    static func == (lhs: Movie, rhs: Movie) -> Bool {
-        return lhs.id == rhs.id
+extension Movie: Codable {
+    init(dictionary: [String: Any]) throws {
+        self = try JSONDecoder().decode(Movie.self, from: JSONSerialization.data(withJSONObject: dictionary))
     }
-
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
-    }
-}
-
-extension Movie: Decodable {
     enum CodingKeys: String, CodingKey {
         case id
         case title
@@ -39,3 +31,13 @@ extension Movie: Decodable {
 
     }
 }
+//extension Movie: Hashable {
+//    static func == (lhs: Movie, rhs: Movie) -> Bool {
+//        return lhs.id == rhs.id
+//    }
+//
+//    func hash(into hasher: inout Hasher) {
+//        hasher.combine(id)
+//    }
+//}
+

@@ -12,7 +12,7 @@ class MoviesListViewController: UIViewController {
    
     @IBOutlet private var loadingView: UIView!
     @IBOutlet var tableView: UITableView!
-    private lazy var searchController: UISearchController = {
+    lazy var searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.tintColor = .label

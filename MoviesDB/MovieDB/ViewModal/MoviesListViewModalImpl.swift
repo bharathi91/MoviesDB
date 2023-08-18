@@ -7,6 +7,7 @@
 
 import Foundation
 class MoviesListViewModalImpl: IMoviesListViewModel {
+    
 
     private let useCase: IMoviesListUseCase
     var listData: [Movie]?
@@ -53,10 +54,11 @@ class MoviesListViewModalImpl: IMoviesListViewModel {
         return []
     }
     
-    func updateSearchResults(searchString: String) {
+    func updateSearchResults(searchString: String) -> Bool {
         let listResults = listData
         if searchString.isEmpty {
            filteredData = listData
+            return true
         }
         else {
                 let filteredList = listResults?.filter({ movie in
@@ -65,43 +67,8 @@ class MoviesListViewModalImpl: IMoviesListViewModel {
            filteredData = filteredList
         }
         self.reloadTable.value = true
+        return false
     }
-}
-protocol IMoviesListUseCase {
-    func getList(searchString: String,completion: @escaping (Result<[Movie], Error>) -> Void)
 }
 
-protocol IMoviesListViewModel: MoviesListViewModelOutput, MoviesListViewModelInput {
-    var input: MoviesListViewModelInput { get }
-    var output: MoviesListViewModelOutput { get }
-}
 
-protocol MoviesListViewModelInput {
-    func getMovieList(searchString:String)
-    func getCellCount() -> Int
-    func getcellData(index: Int) -> Movie?
-    func updateSearchResults(searchString: String)
-    func getListData() -> [Movie]
-}
-protocol MoviesListViewModelOutput {
-    var reloadTable: Dynamic<Bool> { get }
-}
-
-class Dynamic<T> {
-    typealias Listener = (T) -> Void
-    var listener: Listener?
-    
-    func bind(_ listener: Listener?) {
-        self.listener = listener
-    }
-    
-    var value: T {
-        didSet {
-            listener?(value)
-        }
-    }
-    
-    init(_ val: T) {
-        value = val
-    }
-}

@@ -7,77 +7,79 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B65EE1D0-9250-4D5A-80E2-43CBB1C1F98D"
+            uuid = "5EDDA928-E6F6-4D2F-8293-E462336EF3E0"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoviesDBTests/MoviesDBTests.swift"
+            filePath = "MoviesDB/ViewModals/MoviesListUseCaseImpl.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "getList(searchString:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A5C193B2-D76D-44FF-9C57-15458B39AD1A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoviesDB/MovieDB/ViewModal/MoviesListViewModalImpl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "updateSearchResults(searchString:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "74D86FD4-668E-4F08-A2E2-D73AE5D382A2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MoviesDBTests/MovieModalTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
             landmarkName = "testMovieModal()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "B65EE1D0-9250-4D5A-80E2-43CBB1C1F98D - 76c27bc451d3896a"
+                  uuid = "74D86FD4-668E-4F08-A2E2-D73AE5D382A2 - 87dc3d6462c2d828"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "MoviesDBTests.MoviesDBTests.testMovieModal() -&gt; ()"
+                  symbolName = "MoviesDBTests.MovieModalTest.testMovieModal() -&gt; ()"
                   moduleName = "MoviesDBTests"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bhakumar20/Desktop/MoviesDB/MoviesDBTests/MoviesDBTests.swift"
+                  urlString = "file:///Users/bhakumar20/MoviesDB/MoviesDBTests/MovieModalTest.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "145"
-                  endingLineNumber = "145"
-                  offsetFromSymbolStart = "2306">
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "1077">
                </Location>
                <Location
-                  uuid = "B65EE1D0-9250-4D5A-80E2-43CBB1C1F98D - 76c27bc451d3890b"
+                  uuid = "74D86FD4-668E-4F08-A2E2-D73AE5D382A2 - 87dc3d6462c2d828"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "MoviesDBTests.MoviesDBTests.testMovieModal() -&gt; ()"
+                  symbolName = "MoviesDBTests.MovieModalTest.testMovieModal() -&gt; ()"
                   moduleName = "MoviesDBTests"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bhakumar20/Desktop/MoviesDB/MoviesDBTests/MoviesDBTests.swift"
+                  urlString = "file:///Users/bhakumar20/MoviesDB/MoviesDBTests/MovieModalTest.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "144"
-                  endingLineNumber = "144"
-                  offsetFromSymbolStart = "2247">
-               </Location>
-               <Location
-                  uuid = "B65EE1D0-9250-4D5A-80E2-43CBB1C1F98D - 76c27bc451d389c9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MoviesDBTests.MoviesDBTests.testMovieModal() -&gt; ()"
-                  moduleName = "MoviesDBTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bhakumar20/Desktop/MoviesDB/MoviesDBTests/MoviesDBTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "142"
-                  endingLineNumber = "142"
-                  offsetFromSymbolStart = "1984">
-               </Location>
-               <Location
-                  uuid = "B65EE1D0-9250-4D5A-80E2-43CBB1C1F98D - 76c27bc451d389c9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MoviesDBTests.MoviesDBTests.testMovieModal() -&gt; ()"
-                  moduleName = "MoviesDBTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bhakumar20/Desktop/MoviesDB/MoviesDBTests/MoviesDBTests.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "142"
-                  endingLineNumber = "142"
-                  offsetFromSymbolStart = "1925">
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "1543">
                </Location>
             </Locations>
          </BreakpointContent>
