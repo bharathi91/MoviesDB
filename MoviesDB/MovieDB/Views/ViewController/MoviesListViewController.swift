@@ -17,6 +17,8 @@ class MoviesListViewController: UIViewController {
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.tintColor = .label
         searchController.searchBar.delegate = self
+        searchController.searchBar.isAccessibilityElement = true
+        searchController.searchBar.accessibilityIdentifier = "search-bar"
         return searchController
     }()
     override func viewDidLoad() {
@@ -36,10 +38,12 @@ class MoviesListViewController: UIViewController {
     private func setupObserver() {
         /// reload CollectionView
         ///
+        navigationItem.hidesSearchBarWhenScrolling = false
         tableView.tableFooterView = UIView()
         tableView.registerNib(cellClass: MovieTableViewCell.self)
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.accessibilityIdentifier = "tableview"
         viewModel?.output.reloadTable.bind {[weak self] _ in
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
@@ -59,6 +63,9 @@ extension MoviesListViewController : UITableViewDataSource, UITableViewDelegate 
         guard let cell = tableView.dequeueReusableCell(withClass: MovieTableViewCell.self) else {
             assertionFailure("Failed to dequeue \(MovieTableViewCell.self)!")
             return UITableViewCell()
+        }
+        if let index = "Index\(indexPath.row)" as? String {
+            cell.accessibilityIdentifier = index
         }
         cell.bind(to: viewModel?.input.getcellData(index: indexPath.row) ?? Movie(id: 0, title: "test", overview: "test", poster: "Test", voteAverage: 10.0, releaseDate: "Test"))
 
