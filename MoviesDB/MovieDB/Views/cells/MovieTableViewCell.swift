@@ -24,6 +24,7 @@ class MovieTableViewCell: UITableViewCell, NibProvidable, ReusableView {
     func bind(to viewModel: Movie) {
         cancelImageLoading()
         title.text = viewModel.title
+        title.accessibilityIdentifier = viewModel.poster
         subtitle.text = viewModel.releaseDate
         rating.text = "\(viewModel.voteAverage)"
         poster.loadRemoteImageFrom(urlString: "\(Configuration.smallImageUrl)\(viewModel.poster ?? "")")

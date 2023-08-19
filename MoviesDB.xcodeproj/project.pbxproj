@@ -34,6 +34,7 @@
 		6A4E7E642A8C64DD003CF7C8 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A4E7E622A8C64DD003CF7C8 /* MovieTableViewCell.xib */; };
 		6A4E7E662A8C64FE003CF7C8 /* UITableviewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4E7E652A8C64FE003CF7C8 /* UITableviewExtensions.swift */; };
 		6A4E7E682A8C829F003CF7C8 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4E7E672A8C829E003CF7C8 /* ImageDownloader.swift */; };
+		6A661D832A91167500AC8CBF /* Movies.json in Resources */ = {isa = PBXBuildFile; fileRef = 6A661D822A91167500AC8CBF /* Movies.json */; };
 		6AB324B32A8E229900671D42 /* Movies.json in Resources */ = {isa = PBXBuildFile; fileRef = 6AB324B22A8E229900671D42 /* Movies.json */; };
 		6AB324B72A8E234C00671D42 /* MoviesListUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB324B62A8E234C00671D42 /* MoviesListUseCaseImpl.swift */; };
 		6AB324B92A8E238800671D42 /* MoviesListServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB324B82A8E238800671D42 /* MoviesListServiceImpl.swift */; };
@@ -106,6 +107,7 @@
 		6A4E7E622A8C64DD003CF7C8 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 		6A4E7E652A8C64FE003CF7C8 /* UITableviewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableviewExtensions.swift; sourceTree = "<group>"; };
 		6A4E7E672A8C829E003CF7C8 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		6A661D822A91167500AC8CBF /* Movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Movies.json; sourceTree = "<group>"; };
 		6AB324B22A8E229900671D42 /* Movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Movies.json; sourceTree = "<group>"; };
 		6AB324B62A8E234C00671D42 /* MoviesListUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListUseCaseImpl.swift; sourceTree = "<group>"; };
 		6AB324B82A8E238800671D42 /* MoviesListServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListServiceImpl.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				6A4E7E302A8BC008003CF7C8 /* MoviesDBUITests.swift */,
+				6A661D822A91167500AC8CBF /* Movies.json */,
 				6A4E7E322A8BC008003CF7C8 /* MoviesDBUITestsLaunchTests.swift */,
 			);
 			path = MoviesDBUITests;
@@ -479,6 +482,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A661D832A91167500AC8CBF /* Movies.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

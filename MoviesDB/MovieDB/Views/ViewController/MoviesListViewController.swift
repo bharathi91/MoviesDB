@@ -24,7 +24,7 @@ class MoviesListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Movies"
-        viewModel?.input.getMovieList(searchString: "james")
+        viewModel?.input.getMovieList(searchString: "Joker")
         self.configureView()
         self.setupObserver()
     }
