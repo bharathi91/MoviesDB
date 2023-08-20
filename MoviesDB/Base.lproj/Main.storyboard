@@ -20,18 +20,38 @@
                                 <rect key="frame" x="-10.666666666666657" y="36.666666666666686" width="414.33333333333326" height="848"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wnE-XI-C3H">
+                                <rect key="frame" x="0.0" y="34.666666666666686" width="393" height="852"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noData" translatesAutoresizingMaskIntoConstraints="NO" id="cii-nC-HaS">
+                                        <rect key="frame" x="98.333333333333329" y="383.33333333333331" width="196.33333333333337" height="85"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="cii-nC-HaS" firstAttribute="centerX" secondItem="wnE-XI-C3H" secondAttribute="centerX" id="49B-ws-wD2"/>
+                                    <constraint firstItem="cii-nC-HaS" firstAttribute="height" secondItem="wnE-XI-C3H" secondAttribute="height" multiplier="0.1" id="ZVc-eT-l6I"/>
+                                    <constraint firstItem="cii-nC-HaS" firstAttribute="centerY" secondItem="wnE-XI-C3H" secondAttribute="centerY" id="dkF-yE-CKS"/>
+                                    <constraint firstItem="cii-nC-HaS" firstAttribute="width" secondItem="wnE-XI-C3H" secondAttribute="width" multiplier="0.5" id="ynK-bL-kb3"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="E8b-Rp-JEr" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1.05344" id="4zP-i8-pN4"/>
                             <constraint firstItem="E8b-Rp-JEr" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="EUM-oD-PZV"/>
+                            <constraint firstItem="wnE-XI-C3H" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="LiD-Pi-pqQ"/>
                             <constraint firstItem="E8b-Rp-JEr" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.995305" id="MjI-oA-rAT"/>
+                            <constraint firstItem="wnE-XI-C3H" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="OBT-I7-4VO"/>
+                            <constraint firstItem="wnE-XI-C3H" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="krl-1y-7h1"/>
                             <constraint firstItem="E8b-Rp-JEr" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="uqM-bQ-Oxe"/>
+                            <constraint firstItem="wnE-XI-C3H" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="z3j-Pd-dr7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vev-wE-wMd"/>
                     <connections>
+                        <outlet property="alertView" destination="wnE-XI-C3H" id="XUJ-bF-2Rw"/>
                         <outlet property="tableView" destination="E8b-Rp-JEr" id="16E-qm-qAd"/>
                     </connections>
                 </viewController>
@@ -167,6 +187,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="noData" width="105.33333587646484" height="53.333332061767578"/>
         <image name="star" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

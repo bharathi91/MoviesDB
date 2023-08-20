@@ -12,6 +12,8 @@ class MoviesListViewController: UIViewController {
    
     @IBOutlet private var loadingView: UIView!
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var alertView: UIView!
+
     lazy var searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.obscuresBackgroundDuringPresentation = false
@@ -19,6 +21,8 @@ class MoviesListViewController: UIViewController {
         searchController.searchBar.delegate = self
         searchController.searchBar.isAccessibilityElement = true
         searchController.searchBar.accessibilityIdentifier = "search-bar"
+        searchController.searchBar.accessibilityTraits = UIAccessibilityTraits.searchField
+
         return searchController
     }()
     override func viewDidLoad() {
@@ -33,6 +37,7 @@ class MoviesListViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = false
         navigationItem.searchController = self.searchController
         searchController.isActive = true
+        self.alertView.isHidden = true
     }
     
     private func setupObserver() {
@@ -46,6 +51,13 @@ class MoviesListViewController: UIViewController {
         self.tableView.accessibilityIdentifier = "tableview"
         viewModel?.output.reloadTable.bind {[weak self] _ in
             DispatchQueue.main.async {
+                if (self?.viewModel?.filteredData?.count ?? 0 > 0) {
+                    self?.tableView.isHidden = false
+                    self?.alertView.isHidden = true
+                } else {
+                    self?.tableView.isHidden = true
+                    self?.alertView.isHidden = false
+                }
                 self?.tableView.reloadData()
                 print("completed")
             }
@@ -88,11 +100,11 @@ extension MoviesListViewController : UITableViewDataSource, UITableViewDelegate 
 extension MoviesListViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
        // search.send(searchText)
-        viewModel?.updateSearchResults(searchString: searchText)
+        _ = viewModel?.updateSearchResults(searchString: searchText)
     }
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        viewModel?.updateSearchResults(searchString: "")
+        _ = viewModel?.updateSearchResults(searchString: "")
     }
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         viewModel?.input.getMovieList(searchString: searchBar.text ?? "Joker")

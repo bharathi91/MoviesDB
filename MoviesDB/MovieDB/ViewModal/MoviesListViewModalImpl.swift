@@ -27,7 +27,12 @@ class MoviesListViewModalImpl: IMoviesListViewModel {
             case .success(let list):
                 self?.listData = list
                 self?.filteredData = list
-                self?.reloadTable.value = true
+                if self?.filteredData?.count ?? 0 > 0 {
+                    self?.reloadTable.value = true
+                } else {
+                    self?.reloadTable.value = false
+                }
+                
             case .failure( _):
                 DispatchQueue.main.async {
                     
@@ -66,7 +71,12 @@ class MoviesListViewModalImpl: IMoviesListViewModel {
             })
            filteredData = filteredList
         }
-        self.reloadTable.value = true
+        if (filteredData != nil) && (filteredData?.count ?? 0) > 0 {
+            self.reloadTable.value = true
+
+        } else {
+            self.reloadTable.value = false
+        }
         return false
     }
 }

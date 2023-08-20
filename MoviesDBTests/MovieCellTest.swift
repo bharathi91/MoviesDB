@@ -21,7 +21,7 @@ final class MovieCellTest: XCTestCase {
         cell?.bind(to: Movie(id: 1, title: "Test", overview: "Test", poster: "/5w18P8qU9sHRcW6pH3NVGVVIKFw.jpg", voteAverage: 10.0, releaseDate: "2020-09-18"))
         cell?.showImage(image: cell?.poster.image)
         XCTAssertTrue(cell?.title != nil)
-        controller.searchController.searchBar.text = "Test"
+        //controller.searchBar.text = "Test"
         
         XCTAssertFalse(controller.tableView.registerNib(cellClass: MovieTableViewCell.self) == nil)
         XCTAssertFalse(controller.tableView.registerClass(cellClass: MovieTableViewCell.self) == nil)
